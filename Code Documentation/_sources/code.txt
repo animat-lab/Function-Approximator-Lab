@@ -1,0 +1,27 @@
+Code Documentation
+==================
+
+Function Approximator
+---------------------
+
+.. automodule:: functionApproximator
+   :members:
+
+.. autoclass:: fa
+   :members:
+   
+Locally-Weighted Function Approximator
+--------------------------------------
+
+.. automodule:: functionApproximator_LW
+   :members:
+
+.. autoclass:: fa_lw
+   :members:
+   
+Plotting Tools
+--------------
+
+.. automodule:: functionApproximator_PlottingTools
+   :members: plotFA, animPlotFA
+

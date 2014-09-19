@@ -1,0 +1,390 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Code Documentation &mdash; Animat Function Approximator Lab 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Animat Function Approximator Lab 1.0 documentation" href="index.html" />
+    <link rel="prev" title="Welcome to Animat Function Approximator Lab’s documentation!" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to Animat Function Approximator Lab’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Animat Function Approximator Lab 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="code-documentation">
+<h1>Code Documentation<a class="headerlink" href="#code-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-functionApproximator">
+<span id="function-approximator"></span><h2>Function Approximator<a class="headerlink" href="#module-functionApproximator" title="Permalink to this headline">¶</a></h2>
+<p>&#8212;&#8211;Put your information here&#8212;&#8211;</p>
+<blockquote>
+<div>authors: &#8221;???&#8221;, &#8221;???&#8221;, &#8221;???&#8221;
+emails: &#8221;???&#8221;, &#8221;???&#8221;, &#8221;???&#8221;</div></blockquote>
+<hr class="docutils" />
+<dl class="class">
+<dt id="functionApproximator.fa">
+<em class="property">class </em><tt class="descclassname">functionApproximator.</tt><tt class="descname">fa</tt><big>(</big><em>numberOfFeatures</em>, <em>learningRate=0.01</em>, <em>minDelta=1e-05</em>, <em>maxIteration=20000</em><big>)</big><a class="headerlink" href="#functionApproximator.fa" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize class member data based on user defined variables.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>numberOfFeatures</strong> &#8211; Number of features/basis functions used in the FA.</li>
+<li><strong>learningRate</strong> &#8211; Indicated as &#8220;alpha&#8221; in the gradient descent method. Determines the &#8220;distance&#8221; traveled in the direction of the gradient for each step. (Only used in Gradient Descent. Defaults to 0.01)</li>
+<li><strong>minDelta</strong> &#8211; Minimum change between thetas between two consecutive iterations. This is used as a convergence criterion. (Iterative methods only. Defaults to 0.00001)</li>
+<li><strong>maxIteration</strong> &#8211; Maximum number of iterations used for training the FA. (Iterative methods only. Defaults to 20000)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">A function approximator object with the desired variable initializations.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="functionApproximator.fa.calculateDelta">
+<tt class="descname">calculateDelta</tt><big>(</big><big>)</big><a class="headerlink" href="#functionApproximator.fa.calculateDelta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function used to calculate the change in characteristic variables between iterations. 
+Used to estimate the convergence of the iterative learning methods.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A scalar estimation of the difference between consecutive iterations</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="functionApproximator.fa.featureOutput">
+<tt class="descname">featureOutput</tt><big>(</big><em>input</em><big>)</big><a class="headerlink" href="#functionApproximator.fa.featureOutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the output of the features for a given input variable(s)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>input</strong> &#8211; A single or vector of dependent variables with size [Ns] for which to calculate the FA features</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A vector of feature outputs with size [NumFeats x Ns]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="functionApproximator.fa.functionApproximatorOutput">
+<tt class="descname">functionApproximatorOutput</tt><big>(</big><em>input</em>, <em>*user_theta</em><big>)</big><a class="headerlink" href="#functionApproximator.fa.functionApproximatorOutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the FA output for a given input variable(s)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>input</strong> &#8211; A single or vector of dependent variables with size [Ns] for which to calculate the FA features</li>
+<li><strong>user_theta</strong> &#8211; (Variable argument) A vector of theta variables to apply to the FA. If left blank the method will default to using the trained thetas in self.theta. This is only used for visualization purposes.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">A vector of function approximator outputs with size [Ns]</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="functionApproximator.fa.generateDataSample">
+<tt class="descname">generateDataSample</tt><big>(</big><em>x</em><big>)</big><a class="headerlink" href="#functionApproximator.fa.generateDataSample" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a noisy data sample from a given data point in the range [0,1]</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>x</strong> &#8211; A scalar dependent variable for which to calculate the output y_noisy</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The output of the function f with gaussian noise added</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="functionApproximator.fa.performance">
+<tt class="descname">performance</tt><big>(</big><big>)</big><a class="headerlink" href="#functionApproximator.fa.performance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get Cpu and RAM usage statistics using the psutil library</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="functionApproximator.fa.printStats">
+<tt class="descname">printStats</tt><big>(</big><big>)</big><a class="headerlink" href="#functionApproximator.fa.printStats" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print various iteration/convergence statistics during training</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="functionApproximator.fa.setCentersAndWidths">
+<tt class="descname">setCentersAndWidths</tt><big>(</big><big>)</big><a class="headerlink" href="#functionApproximator.fa.setCentersAndWidths" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the center location and width for each basis function assuming the dependent variable
+range is [0,1].</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-functionApproximator_LW">
+<span id="locally-weighted-function-approximator"></span><h2>Locally-Weighted Function Approximator<a class="headerlink" href="#module-functionApproximator_LW" title="Permalink to this headline">¶</a></h2>
+<p>&#8212;&#8211;Put your information here&#8212;&#8211;</p>
+<blockquote>
+<div>authors: &#8221;???&#8221;, &#8221;???&#8221;, &#8221;???&#8221;
+emails: &#8221;???&#8221;, &#8221;???&#8221;, &#8221;???&#8221;</div></blockquote>
+<hr class="docutils" />
+<dl class="class">
+<dt id="functionApproximator_LW.fa_lw">
+<em class="property">class </em><tt class="descclassname">functionApproximator_LW.</tt><tt class="descname">fa_lw</tt><big>(</big><em>numberOfFeatures</em>, <em>minDelta=1e-05</em>, <em>maxIteration=20000</em><big>)</big><a class="headerlink" href="#functionApproximator_LW.fa_lw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize class member data based on user defined variables.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>numberOfFeatures</strong> &#8211; Number of features/basis functions used in the FA.</li>
+<li><strong>minDelta</strong> &#8211; Minimum change between thetas between two consecutive iterations. This is used as a convergence criterion. (Iterative methods only. Defaults to 0.00001)</li>
+<li><strong>maxIteration</strong> &#8211; Maximum number of iterations used for training the FA. (Iterative methods only. Defaults to 20000)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">A function approximator object with the desired variable initializations.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="functionApproximator_LW.fa_lw.calculateDelta">
+<tt class="descname">calculateDelta</tt><big>(</big><big>)</big><a class="headerlink" href="#functionApproximator_LW.fa_lw.calculateDelta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function used to calculate the change in characteristic variables between iterations. 
+Used to estimate the convergence of the iterative learning methods.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A scalar estimation of the difference between consecutive iterations</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="functionApproximator_LW.fa_lw.featureOutput">
+<tt class="descname">featureOutput</tt><big>(</big><em>input</em><big>)</big><a class="headerlink" href="#functionApproximator_LW.fa_lw.featureOutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the output of the features for a given input variable(s)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>input</strong> &#8211; A single or vector of dependent variables with size [Ns] for which to calculate the FA features</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A vector of feature outputs with size [NumFeats x Ns]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="functionApproximator_LW.fa_lw.functionApproximatorOutput">
+<tt class="descname">functionApproximatorOutput</tt><big>(</big><em>input</em><big>)</big><a class="headerlink" href="#functionApproximator_LW.fa_lw.functionApproximatorOutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the FA output for a given input variable(s)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>input</strong> &#8211; A single or vector of dependent variables with size [Ns] for which to calculate the FA features</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A vector of function approximator outputs with size [Ns]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="functionApproximator_LW.fa_lw.getWeights">
+<tt class="descname">getWeights</tt><big>(</big><em>input</em><big>)</big><a class="headerlink" href="#functionApproximator_LW.fa_lw.getWeights" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the weights for a given input variable(s)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>input</strong> &#8211; A single or vector of dependent variables with size [Ns] for which to calculate the FA features</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A vector of feature outputs with size [NumFeats x Ns]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="functionApproximator_LW.fa_lw.performance">
+<tt class="descname">performance</tt><big>(</big><big>)</big><a class="headerlink" href="#functionApproximator_LW.fa_lw.performance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get Cpu and RAM usage statistics using the psutil library</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="functionApproximator_LW.fa_lw.printStats">
+<tt class="descname">printStats</tt><big>(</big><big>)</big><a class="headerlink" href="#functionApproximator_LW.fa_lw.printStats" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print various iteration/convergence statistics during training</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="functionApproximator_LW.fa_lw.setCentersAndWidths">
+<tt class="descname">setCentersAndWidths</tt><big>(</big><big>)</big><a class="headerlink" href="#functionApproximator_LW.fa_lw.setCentersAndWidths" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the center location and width for each basis function assuming the dependent variable
+range is [0,1].</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-functionApproximator_PlottingTools">
+<span id="plotting-tools"></span><h2>Plotting Tools<a class="headerlink" href="#module-functionApproximator_PlottingTools" title="Permalink to this headline">¶</a></h2>
+<p>__author__ = &#8220;Ryan Lober&#8221;
+__credits__ = &#8220;Olivier Sigaud, Nicolas Perrin, Didier Marin and Florian Lesaint&#8221;
+__version__ = &#8220;1.0&#8221;</p>
+<dl class="function">
+<dt id="functionApproximator_PlottingTools.plotFA">
+<tt class="descclassname">functionApproximator_PlottingTools.</tt><tt class="descname">plotFA</tt><big>(</big><em>fa_object</em>, <em>data</em><big>)</big><a class="headerlink" href="#functionApproximator_PlottingTools.plotFA" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function can be used to plot all of the relevant approximator data and performance statistic, as well as an overlay with the original function.&#8221;</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>fa_object</strong> &#8211; a trained function approximator object</li>
+<li><strong>data</strong> &#8211; original noisy data set</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="functionApproximator_PlottingTools.animPlotFA">
+<tt class="descclassname">functionApproximator_PlottingTools.</tt><tt class="descname">animPlotFA</tt><big>(</big><em>fa_object</em>, <em>data</em><big>)</big><a class="headerlink" href="#functionApproximator_PlottingTools.animPlotFA" title="Permalink to this definition">¶</a></dt>
+<dd><p>For iterative methods, this function can be used to plot the evolution of the approximator over its training.&#8221;</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>fa_object</strong> &#8211; a trained function approximator object</li>
+<li><strong>data</strong> &#8211; original noisy data set</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Code Documentation</a><ul>
+<li><a class="reference internal" href="#module-functionApproximator">Function Approximator</a></li>
+<li><a class="reference internal" href="#module-functionApproximator_LW">Locally-Weighted Function Approximator</a></li>
+<li><a class="reference internal" href="#module-functionApproximator_PlottingTools">Plotting Tools</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Welcome to Animat Function Approximator Lab&#8217;s documentation!</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/code.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to Animat Function Approximator Lab’s documentation!"
+             >previous</a> |</li>
+        <li><a href="index.html">Animat Function Approximator Lab 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Ryan Lober.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>
