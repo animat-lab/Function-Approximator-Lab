@@ -32,7 +32,6 @@ class fa_lw():
 		self.theta 			= np.zeros((2,self.numFeatures)) #initialize theta vector to appropriate size
 		self.maxIter 		= maxIteration
 		self.threshold 		= minDelta
-		self.alpha 			= learningRate
 		
 		# Auxiliary variables used in the class
 		self.theta_old 		= np.zeros((2,self.numFeatures))

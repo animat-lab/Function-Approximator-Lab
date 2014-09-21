@@ -25,23 +25,23 @@ data = np.loadtxt(filename)
 ### Set up FA variables
 ############################################################################
 
-# Number of features/basis functions used in the FA.
-numFeats = 10 
+# Number of features/basis functions used in the FA. (hint: 15 is a good starting point)
+numFeats = """Tune me !""" 
 
 # Indicated as "alpha" in the gradient descent method. Determines the "distance" traveled in the direction of the gradient for each step.
 # (Only used in Gradient Descent)
 # (Defaults to 0.01)
-learningRate = 0.01
+learningRate = """Tune me !"""
 
 # Minimum change between thetas between two consecutive iterations. This is used as a convergence criterion.
 # (Iterative methods only)
 # (Defaults to 0.00001)
-minDelta = 1E-12
+minDelta = """Tune me !"""
 
 # Maximum number of iterations used for training the FA 
 # (Iterative methods only)
 # (Defaults to 20000)
-maxIteration = 20000
+maxIteration = """Tune me !"""
 
 
 ### Setting up the FA and experimenting with different training methods
