@@ -20,3 +20,15 @@ Because the linux distros on the lab computers are depreciated we will be using 
           - set the tab button to insert a **tabulation**
 5. Open the run.py, along with any other relevent file, from the unzipped repo.
 6. As you coplete your code you can execute the code by making sure the run.py script is the open tab and clicking execute or the F5 button.
+
+
+Useful Stuff
+------------
+
+[Numpy documentation](http://docs.scipy.org/doc/numpy/reference/index.html)
+
+[Matplotlib documentaion](http://matplotlib.org/contents.html)
+
+[Github repo](https://github.com/animat-lab/Function-Approximator-Lab)
+
+[Submission email address](mailto:animat.lab@gmail.com)
