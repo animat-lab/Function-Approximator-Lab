@@ -25,6 +25,8 @@ Because the linux distros on the lab computers are depreciated we will be using 
 Useful Stuff
 ------------
 
+[Course Wesite](http://pages.isir.upmc.fr/~sigaud/teach/)
+
 [Numpy documentation](http://docs.scipy.org/doc/numpy/reference/index.html)
 
 [Matplotlib documentaion](http://matplotlib.org/contents.html)
